@@ -1,0 +1,12 @@
+collections:
+  Pixar Movies:
+    trakt_list: https://trakt.tv/users/dweagle79/lists/disney-pixar-films
+    item_label: Pixar
+    sync_mode: sync
+    summary: "Collection of Pixar Animated Studio movies"
+    sort_title: '!035_PixarMovies'
+    file_poster: config/dadflix-custom/misc/PixarCollection.jpg
+    collection_order: release
+    radarr_add_missing: true
+    delete_below_minimum: true
+    minimum_items: 1

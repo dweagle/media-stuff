@@ -1,0 +1,10 @@
+collections:
+  Documentary:
+    sync_mode: sync
+    summary: "A collection of documentaries with a variety of topics."
+    sort_title: '!035_Documentary'
+    minimum_items: 1  
+    smart_filter:
+      all:
+        genre: Documentary
+      sort_by: title.asc

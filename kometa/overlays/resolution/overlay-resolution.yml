@@ -1,0 +1,98 @@
+templates:
+  # Commented out back_****: attributes are needed if poster doesn't have
+  # a black gradient at bottom. Uncomment to create black transparent backings.
+  resolution:
+    overlay:
+      name: <<overlay_name>>
+      file: config/dadflix-custom/resolution/<<key>><<alt>>.png
+      group: resolution
+      weight: <<weight>>
+      horizontal_align: left
+      horizontal_offset: 35
+      vertical_align: bottom
+      vertical_offset: 29
+      # back_width: 305
+      # back_height: 60
+      # back_radius: 15
+      # back_color: '#00000099'
+    conditionals:
+      res:
+        conditions:
+          - key: 4k
+            value: "(?i)2160|4k"
+          - key: 1080p
+            value: "(?i)1080|2k"
+          - key: 720p
+            value: "(?i)720|hd"
+          - key: 576p
+            value: "(?i)576"
+          - key: 480p
+            value: "(?i)480|sd"
+      dolby_vision:
+        conditions:
+          - alt: dv
+            value: true
+      hdr:
+        conditions:
+          - alt: hdr
+            value: true
+      regex:
+        conditions:
+          - alt: plus
+            value: '(?i)\bhdr10(\+|p(lus)?\b)'
+          - alt: dvhdr
+            value: '(?i)\bdv(.hdr10?\b)'
+          - alt: dvhdrplus
+            value: '(?i)\bdv.HDR10(\+|P(lus)?\b)'
+    optional:
+      - all
+      - use_<<key>>
+      - use_<<key>>_<<alt>>
+      - use_<<alt>>
+    run_definition:
+      - <<use_<<key>>>>
+      - <<use_<<alt>>>>
+      - <<use_<<key>>_<<alt>>>>
+    ignore_blank_results: true
+    plex_all: true
+    plex_search:
+      all:
+        any:
+          resolution.regex: <<res>>
+        hdr: <<hdr>>
+    filters:
+      has_dolby_vision: <<dolby_vision>>
+      filepath.regex:
+        - <<regex>>
+
+overlays:
+  4K-DV-HDR-Plus:
+    variables: {key: 4k, alt: dvhdrplus, weight: 159}
+    template: [name: resolution]
+  4K-DV-HDR:
+    variables: {key: 4k, alt: dvhdr, weight: 158}
+    template: [name: resolution]
+  4K-Plus:
+    variables: {key: 4k, alt: plus, weight: 155}
+    template: [name: resolution]
+  4K-DV:
+    variables: {key: 4k, alt: dv, weight: 150}
+    template: [name: resolution]
+  4K-HDR:
+    variables: {key: 4k, alt: hdr, weight: 140}
+    template: [name: resolution]
+  4K:
+    variables: {key: 4k, alt: "", weight: 130}
+    template: [name: resolution]
+  1080P:
+    variables: {key: 1080p, alt: "", weight: 100}
+    template: [name: resolution]
+  720P:
+    variables: {key: 720p, alt: "", weight: 70}
+    template: [name: resolution]
+  576P:
+    variables: {key: 576p, alt: "", weight: 40}
+    template: [name: resolution]
+  480P:
+    variables: {key: 480p, alt: "", weight: 10}
+    template: [name: resolution]

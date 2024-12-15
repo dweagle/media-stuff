@@ -1,0 +1,128 @@
+overlays:
+# Commented out back_****: attributes are needed if poster doesn't have
+# a black gradient at bottom. Uncomment to create black transparent backings.
+  Critic_rating_certified:
+    overlay:
+      name: text(<<critic_rating%>>%)
+      font: config/dadflix-custom/ratings/Inter-Medium.ttf
+      font_size: 55
+      font_color: "#FFFFFF"
+      stroke_width: 1
+      stroke_color: "#FFFFFF"
+      # back_padding: 0
+      # back_height: 60
+      # back_width: 280
+      # back_radius: 15
+      # back_color: "#00000099"
+      horizontal_align: left
+      vertical_align: bottom
+      horizontal_offset: 350
+      vertical_offset: 26
+      file: config/dadflix-custom/ratings/RT-Crit-Top.png
+      addon_position: left
+      addon_offset: 7
+    ignore_blank_results: true
+    plex_search:
+      all:
+        critic_rating.gte: 9
+
+  Critic_rating_fresh:
+    overlay:
+      name: text(<<critic_rating%>>%)
+      font: config/dadflix-custom/ratings/Inter-Medium.ttf
+      font_size: 55
+      font_color: "#FFFFFF"
+      stroke_width: 1
+      stroke_color: "#FFFFFF"
+      # back_padding: 0
+      # back_height: 60
+      # back_width: 280
+      # back_radius: 15
+      # back_color: "#00000099"
+      horizontal_align: left
+      vertical_align: bottom
+      horizontal_offset: 350
+      vertical_offset: 26
+      file: config/dadflix-custom/ratings/RT-Crit-Fresh.png
+      addon_position: left
+      addon_offset: 7
+    ignore_blank_results: true
+    plex_search:
+      all:
+        critic_rating.gte: 6
+        critic_rating.lt: 9
+
+  Critic_rating_rotten:
+    overlay:
+      name: text(<<critic_rating%>>%)
+      font: config/dadflix-custom/ratings/Inter-Medium.ttf
+      font_size: 55
+      font_color: "#FFFFFF"
+      stroke_width: 1
+      stroke_color: "#FFFFFF"
+      # back_padding: 0
+      # back_height: 60
+      # back_width: 280
+      # back_radius: 15
+      # back_color: "#00000099"
+      horizontal_align: left
+      vertical_align: bottom
+      horizontal_offset: 350
+      vertical_offset: 26
+      file: config/dadflix-custom/ratings/RT-Crit-Rotten.png
+      addon_position: left
+      addon_offset: 7
+    ignore_blank_results: true
+    plex_search:
+      all:
+        critic_rating.lt: 6
+
+  audience_rating_fresh:
+    overlay:
+      name: text(<<audience_rating%>>%)
+      font: config/dadflix-custom//ratings/Inter-Medium.ttf
+      font_size: 55
+      font_color: "#FFFFFF"
+      stroke_width: 1
+      stroke_color: "#FFFFFF"
+      # back_padding: 0
+      # back_height: 60
+      # back_width: 280
+      # back_radius: 15
+      # back_color: "#00000099"
+      horizontal_align: left
+      vertical_align: bottom
+      horizontal_offset: 575
+      vertical_offset: 26
+      file: config/dadflix-custom/ratings/RT-Aud-Fresh.png
+      addon_position: left
+      addon_offset: 7
+    ignore_blank_results: true
+    plex_search:
+      all:
+        audience_rating.gte: 6
+
+  audience_rating_rotten:
+    overlay:
+      name: text(<<audience_rating%>>%)
+      font: config/dadflix-custom//ratings/Inter-Medium.ttf
+      font_size: 55
+      font_color: "#FFFFFF"
+      stroke_width: 1
+      stroke_color: "#FFFFFF"
+      # back_padding: 0
+      # back_height: 60
+      # back_width: 280
+      # back_radius: 15
+      # back_color: "#00000099"
+      horizontal_align: left
+      vertical_align: bottom
+      horizontal_offset: 575
+      vertical_offset: 26
+      file: config/dadflix-custom/ratings/RT-Aud-Rotten.png
+      addon_position: left
+      addon_offset: 7
+    ignore_blank_results: true
+    plex_search:
+      all:
+        audience_rating.lt: 6

@@ -1,0 +1,13 @@
+overlays:
+  Mediastinger:
+    overlay:
+      name: Mediastinger
+      file: config/dadflix-custom/misc/Mediastinger.png
+      horizontal_align: right
+      horizontal_offset: 35
+      vertical_align: bottom
+      vertical_offset: 100
+    tmdb_discover:
+      limit: 2000
+      with_keywords: 179430|179431
+      region: US

@@ -1,0 +1,139 @@
+collections:
+
+############################
+#          MONTHS          #
+############################
+
+  Regular Prerolls:
+    build_collection: false
+    sync_mode: append
+    server_preroll: /data/plex_preroll_videos/LOGO014K.mp4;/data/plex_preroll_videos/LOGO034K.mp4;/data/plex_preroll_videos/LOGO024K.mp4;/data/plex_preroll_videos/LOGO04FULLHD.mp4;/data/plex_preroll_videos/LOGO044K.mp4;/data/plex_preroll_videos/LOGO054K.mp4;/data/plex_preroll_videos/ParticleSwirl.mp4;/data/plex_preroll_videos/LightningPlex.mp4;/data/plex_preroll_videos/Apocalypse.mp4;/data/plex_preroll_videos/DadflixPreroll.mp4;/data/plex_preroll_videos/Dadflix_Preroll_Ambiance_1080p.mp4;/data/plex_preroll_videos/Dadflix_Preroll_Netflix_Style_1080p.mp4;/data/plex_preroll_videos/Particles_Plex.mp4;/data/plex_preroll_videos/Particle_Stream_Plex_Original_Colors.mp4;/data/plex_preroll_videos/Tunnel_Plex_Blue.mp4;/data/plex_preroll_videos/Synth_Dream_Plex.mp4;/data/plex_preroll_videos/VHS_Home_Theater_Plex_V3.mp4;/data/plex_preroll_videos/Cinematic_Cards_Plex_Pre-roll.mp4;/data/plex_preroll_videos/Adult_Swim_Plex.mp4;/data/plex_preroll_videos/Puzzle_Cubes_Plex_4K.mp4;/data/plex_preroll_videos/Stability_HDR_24fps.mp4;/data/plex_preroll_videos/Particle_Effect_and_Glitch_Plex.mp4;/data/plex_preroll_videos/Retrowave_Plex.mp4
+    schedule:
+      - range(01/01-01/31)                                              # January
+      - range(02/01-02/28)                                              # February
+      - range(03/01-03/31)                                              # March
+      - range(04/01-04/30)                                              # April
+      - range(05/01-05/31)                                              # May
+      - range(06/01-06/30)                                              # June
+      - range(07/01-07/31)                                              # July
+      - range(08/01-08/31)                                              # August
+      - range(09/01-09/30)                                              # September
+      - range(11/01-11/30)                                              # November
+      - range(12/01-12/31)                                              # December
+
+  Halloween:
+    build_collection: false
+    sync_mode: append
+    server_preroll: /data/plex_preroll_videos/halloween/DrippingBlood.mp4;/data/plex_preroll_videos/halloween/GhostReveal.mp4;/data/plex_preroll_videos/halloween/HalloweenPlex.mp4;/data/plex_preroll_videos/halloween/PlexBeetleJuice.mp4:/data/plex_preroll_videos/halloween/HalloweenMoonPlex.mp4;/data/plex_preroll_videos/halloween/HappyHalloween.mp4;/data/plex_preroll_videos/halloween/CarvingPumpkin.mp4
+    schedule: range(10/01-10/31)                                        # October
+
+############################ 
+#        BIRTHDAYS         # 
+############################
+
+  KerriganBirthday:
+    build_collection: false
+    sync_mode: append
+    server_preroll: /data/plex_preroll_videos/birthdays/KerriganBirthday.mp4;/data/plex_preroll_videos/birthdays/KerriganBirthday2.mp4
+    schedule: range(11/28-11/30)
+
+############################                                            # https://www.calendardate.com | https://www.timeanddate.com/holidays/fun
+#    HOLIDAYS / SEASONS    #                                            # https://www.travelchinaguide.com/essential/holidays/when-is-mid-autumn-festival.htm
+############################                                            # https://www.officeholidays.com/holidays/lao/lao-new-year
+
+  Winter:
+    build_collection: false
+    sync_mode: append
+    server_preroll: /data/plex_preroll_videos/winter/WinterForest.mp4;/data/plex_preroll_videos/winter/FrostPlex.mp4
+    schedule: range(01/07-01/13)
+  Valentine's Day:
+    build_collection: false
+    sync_mode: append
+    server_preroll: /data/plex_preroll_videos/valentines/ValentinesHearts.mp4;/data/plex_preroll_videos/valentines/ValentinesFlowers.mp4
+    schedule: range(2/12-02/15)
+  St. Patrick's Day:
+    build_collection: false
+    sync_mode: append
+    server_preroll: /data/plex_preroll_videos/stpatricks/StPatricks.mp4
+    schedule: range(03/14-03/17)
+  Spring:
+    build_collection: false
+    sync_mode: append
+    server_preroll: /data/plex_preroll_videos/spring/SpringFlowerField.mp4;/data/plex_preroll_videos/spring/SpringNature.mp4
+    schedule: range(03/19-03/28)
+  Easter:
+    build_collection: false
+    sync_mode: append
+    server_preroll: /data/plex_preroll_videos/easter/EasterEgg.mp4;/data/plex_preroll_videos/easter/GoldenEasterEggs.mp4;/data/plex_preroll_videos/easter/Easter.mp4
+    schedule: range(03/29-03/31)                                             # This changes yearly | Set for 2024
+  April Fool's Day:
+    build_collection: false
+    sync_mode: append
+    server_preroll: /data/plex_preroll_videos/aprilfools/FBI.mp4;/data/plex_preroll_videos/aprilfools/LEDBulb.mp4
+    schedule: yearly(04/01)
+  Star Wars Day:
+    build_collection: false
+    sync_mode: append
+    server_preroll: /data/plex_preroll_videos/starwars/StarWarsHyperspace.mp4
+    schedule: yearly(05/04)
+  Mother's Day:
+    build_collection: false
+    sync_mode: append
+    server_preroll: /data/plex_preroll_videos/mothers/MothersDay.mp4
+    schedule: range(05/10-05/12)                                             # This changes yearly | Set for 2024
+  Summer:
+    build_collection: false
+    sync_mode: append
+    server_preroll: /data/plex_preroll_videos/summer/SummerBeach.mp4;/data/plex_preroll_videos/summer/SummerBeach2.mp4
+    schedule: range(06/20-6/27)
+  Flag Day:
+    build_collection: false
+    sync_mode: append
+    server_preroll: /data/plex_preroll_videos/flagday/FlagDayPlex.mp4
+    schedule: range(06/13-06/14)
+  Father's Day:
+    build_collection: false
+    sync_mode: append
+    server_preroll: /data/plex_preroll_videos/fathers/FathersDay.mp4
+    schedule: range(06/15-06/16)                                             # This changes yearly | Set for 2024
+  4th of July:
+    build_collection: false
+    sync_mode: append
+    server_preroll: /data/plex_preroll_videos/july4th/July4th.mp4
+    schedule: range(07/01-07/05)
+  International Beer Day:
+    build_collection: false
+    sync_mode: append
+    server_preroll: /data/plex_preroll_videos/internationalbeer/InternationalBeerDay.mp4
+    schedule: yearly(08/02)
+  Fall:
+    build_collection: false
+    sync_mode: append
+    server_preroll: /data/plex_preroll_videos/fall/AutumnPlex.mp4;/data/plex_preroll_videos/fall/MapleLeaves.mp4;/data/plex_preroll_videos/fall/Fall_Fox_Plex_Pre-roll.mp4
+    schedule: range(09/20-9/30)
+  # HALLOWEEN 10/01 - 10/31 SEE ABOVE
+  Election Day:
+    build_collection: false
+    sync_mode: append
+    server_preroll: /data/plex_preroll_videos/election/ElectionDay.mp4
+    schedule: range(11/01-11/05)
+  FallPostElectionDay:
+    build_collection: false
+    sync_mode: append
+    server_preroll: /data/plex_preroll_videos/fall/AutumnPlex.mp4;/data/plex_preroll_videos/fall/MapleLeaves.mp4;/data/plex_preroll_videos/fall/Fall_Fox_Plex_Pre-roll.mp4
+    schedule: range(11/06-11/19)                                            # This changes yearly | Set for 2024
+  Thanksgiving:
+    build_collection: false
+    sync_mode: append
+    server_preroll: /data/plex_preroll_videos/thanksgiving/Thanksgiving.mp4;/data/plex_preroll_videos/thanksgiving/ThanksgivingPopUpCard.mp4
+    schedule: range(11/20-11/28)                                             # This changes yearly | Set for 2024
+  Christmas:
+    build_collection: false
+    sync_mode: append
+    server_preroll: /data/plex_preroll_videos/christmas/ChristmasLights.mp4;/data/plex_preroll_videos/christmas/ChristmasPaperTown.mp4;/data/plex_preroll_videos/christmas/ChristmasPopUpCard.mp4;/data/plex_preroll_videos/christmas/ChristmasTree.mp4
+    schedule: range(12/01-12/25)
+  New Years:
+    build_collection: false
+    sync_mode: append
+    server_preroll: /data/plex_preroll_videos/newyears/NewYearFireworksFancy.mp4;/data/plex_preroll_videos/newyears/NewYearPopUpCard.mp4;/data/plex_preroll_videos/newyears/NewYearsFireworks.mp4
+    schedule: range(12/26-01/06)

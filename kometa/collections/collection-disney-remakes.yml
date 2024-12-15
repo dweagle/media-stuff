@@ -1,0 +1,13 @@
+collections:
+  Disney Live Action:
+    trakt_list: https://trakt.tv/users/dweagle79/lists/disney-live-action-remakes
+    item_label: DisneyLiveAction
+    sync_mode: sync
+    summary: "A collection of Disney live action films remade from classic animated Disney films."
+    sort_title: '!035_DisneyLiveAction'
+    file_poster: config/dadflix-custom/misc/DisneyRemakes.png
+    collection_order: release
+    radarr_add_missing: true
+    delete_below_minimum: true
+    minimum_items: 1
+  

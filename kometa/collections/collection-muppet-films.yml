@@ -1,0 +1,12 @@
+collections:
+  The Muppets Films:
+    trakt_list: https://trakt.tv/users/dweagle79/lists/muppet-films
+    item_label: Muppets
+    sync_mode: sync
+    summary: This is a list of film productions based on The Muppets characters and franchise, including films and specials. The franchise's main work is The Muppet Show, a syndicated television series which ran from 1976 to 1981. The franchise includes eight feature films, and other television series.
+    sort_title: '!035_Muppets'
+    file_poster: config/dadflix-custom/misc/MuppetsFilms.jpg
+    collection_order: release
+    radarr_add_missing: true
+    delete_below_minimum: true
+    minimum_items: 1

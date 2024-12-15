@@ -1,0 +1,12 @@
+collections:
+  Disney Classics:
+    trakt_list: https://trakt.tv/users/dweagle79/lists/disney-animated-classics
+    item_label: DisneyClassics
+    sync_mode: sync
+    summary: "A collection all of the officially numbered feature 'Classic' films Walt Disney Animation Studios has released. Disney maintains these numbered films, so personal opinion cannot just add or remove films from the list based on popularity. This list does not include the Disney/Pixar films (such as Finding Nemo or Coco), nor does it include the many Direct-to-Video sequels (The Lion King II: Simba's Pride, for instance) produced by Disney over the years."
+    sort_title: '!035_DisneyClassics'
+    file_poster: config/dadflix-custom/misc/DisneyClassics.jpeg
+    collection_order: release
+    radarr_add_missing: true
+    delete_below_minimum: true
+    minimum_items: 1

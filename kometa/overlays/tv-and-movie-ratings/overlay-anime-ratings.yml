@@ -1,0 +1,49 @@
+overlays:
+# Commented out back_****: attributes are needed if poster doesn't have
+# a black gradient at bottom. Uncomment to create black transparent backings.
+  critic:
+    overlay:
+      name: text(<<mal_rating>>)
+      font: config/dadflix-custom/ratings/Inter-Medium.ttf
+      font_size: 55
+      font_color: "#FFFFFF"
+      stroke_width: 1
+      stroke_color: "#FFFFFF"
+      # back_padding: 0
+      # back_height: 60
+      # back_width: 280
+      # back_radius: 15
+      # back_color: "#00000099"
+      horizontal_align: left
+      vertical_align: bottom
+      horizontal_offset: 350
+      vertical_offset: 26
+      file: config/dadflix-custom/ratings/MAL.png
+      addon_position: left
+      addon_offset: 7
+    ignore_blank_results: true
+    plex_all: true
+
+  audience:
+    overlay:
+      name: text(<<imdb_rating>>)
+      font: config/dadflix-custom/ratings/Inter-Medium.ttf
+      font_size: 55
+      font_color: "#FFFFFF"
+      stroke_width: 1
+      stroke_color: "#FFFFFF"
+      # back_padding: 0
+      # back_height: 60
+      # back_width: 280
+      # back_radius: 15
+      # back_color: "#00000099"
+      horizontal_align: left
+      vertical_align: bottom
+      horizontal_offset: 575
+      vertical_offset: 26
+      file: config/dadflix-custom/ratings/IMDb.png
+      addon_position: left
+      addon_offset: 7
+    ignore_blank_results: true
+    plex_all: true
+

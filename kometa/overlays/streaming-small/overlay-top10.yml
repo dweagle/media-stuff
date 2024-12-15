@@ -1,0 +1,68 @@
+templates:
+  Top 10 Overlay:
+    overlay:
+      name: text(TOP 10)
+      group: top10
+      weight: <<weight>>
+      vertical_align: top
+      vertical_offset: 105
+      horizontal_align: left
+      horizontal_offset: 30
+      font: config/dadflix-custom/ratings/Inter-Medium.ttf
+      font_size: 45 
+      font_color: "#80FF40"
+      back_padding: 0
+      back_width: 215
+      back_height: 70
+      back_radius: 10
+      back_color: "#000000B3"
+
+overlays:
+  
+  Netflix Top 10:
+    variables: {key: netflix, weight: 60}
+    template: [name: Top 10 Overlay]
+    trakt_list:
+      - https://trakt.tv/users/navino16/lists/netflix-united-states-top10-with-united-kingdom-fallback
+
+  Disney Top 10:
+    variables: {key: disney, weight: 50}
+    template: [name: Top 10 Overlay]
+    trakt_list: 
+      - https://trakt.tv/users/navino16/lists/disney-world-top10-without-fallback
+
+  Max Top 10:
+    variables: {key: max, weight: 40}
+    template: [name: Top 10 Overlay]
+    trakt_list: 
+      - https://trakt.tv/users/navino16/lists/hbo-united-states-top10-with-united-kingdom-fallback
+
+  Hulu Top 10:
+    variables: {key: hulu, weight: 30}
+    template: [name: Top 10 Overlay]
+    trakt_list: 
+      - https://trakt.tv/users/navino16/lists/hulu-united-states-top10-with-united-kingdom-fallback
+
+  Paramount Top 10:
+    variables: {key: paramount, weight: 20}
+    template: [name: Top 10 Overlay]
+    trakt_list: 
+      - https://trakt.tv/users/navino16/lists/paramount-plus-united-states-top10-with-united-kingdom-fallback
+    
+  Prime Top 10:
+    variables: {key: prime, weight: 10}
+    template: [name: Top 10 Overlay]
+    trakt_list: 
+      - https://trakt.tv/users/navino16/lists/amazon-prime-united-states-top10-with-united-kingdom-fallback
+    
+  Apple Top 10:
+    variables: {key: apple, weight: 9}
+    template: [name: Top 10 Overlay]
+    trakt_list: 
+      - https://trakt.tv/users/navino16/lists/apple-tv-united-states-top10-with-united-kingdom-fallback
+
+  Starz Top 10:
+    variables: {key: starz, weight: 8}
+    template: [name: Top 10 Overlay]
+    trakt_list: 
+      - https://trakt.tv/users/navino16/lists/starz-united-states-top10-with-united-kingdom-fallback

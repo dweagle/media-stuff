@@ -1,0 +1,64 @@
+######################################################
+#                Holiday Collections                 #
+######################################################
+templates:
+  Holiday:
+    summary: "A timed collection of <<holiday>> movies that may relate to the holiday. NOTE: This collection will automatically disappear once the holiday period is over."
+    delete_not_scheduled: true
+    sort_title: '!00'
+    sync_mode: sync
+    visible_home: true
+    visible_shared: true
+    visible_library: true
+    item_label: <<label>>
+    non_item_remove_label: <<label>>
+    url_poster: <<poster>>
+
+collections:
+  🎄🎅 Christmas Movies 🎄🎁:
+    schedule: range(12/01-12/31)
+    template: {name: Holiday, label: Christmas, holiday: Christmas, emoji: 🎄, poster: https://theposterdb.com/api/assets/223925}
+    collection_order: random
+    trakt_list:
+      - https://trakt.tv/users/dweagle79/lists/christmas-movies
+
+  Christmas Label Remove:
+    schedule: yearly(01/01)
+    item_label.remove: Christmas
+    sync_mode: append
+    collection_order: custom
+    build_collection: false
+    plex_all: true
+
+  💕🌹 Valentine's Movies 💕💋:
+    schedule: range(02/01-02/15)
+    template: {name: Holiday, label: Valentines, holiday: Valentine's, emoji: ❤️, poster: https://theposterdb.com/api/assets/223922}
+    smart_filter:
+      all:
+        genre: Romance
+        genre.not: Animation, Family, Fantasy, Action, Adventure, Science Fiction, War, Biography, Sport
+      sort_by: random
+
+  Valentines Label Remove:
+    schedule: yearly(02/16)
+    item_label.remove: Valentines
+    sync_mode: append
+    collection_order: custom
+    build_collection: false
+    plex_all: true
+
+  👻👹 Halloween Movies 🎃💀:
+    schedule: range(10/01-11/01)
+    template: {name: Holiday, label: Halloween, holiday: Halloween, emoji: 👻, poster: https://theposterdb.com/api/assets/223927}
+    smart_filter:
+      all:
+        genre: Horror
+      sort_by: random
+
+  Halloween Label Remove:
+    schedule: yearly(11/02)
+    item_label.remove: Halloween
+    sync_mode: append
+    collection_order: custom
+    build_collection: false
+    plex_all: true

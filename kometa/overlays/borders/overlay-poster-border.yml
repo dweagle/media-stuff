@@ -1,0 +1,7 @@
+overlays:
+  Christmas Border:
+    overlay:
+      name: Christmas Border
+      file: config/dadflix-custom/borders/Christmas.png
+    trakt_list: https://trakt.tv/users/dweagle79/lists/christmas-movies
+

@@ -1,0 +1,140 @@
+templates:
+  streaming:
+    overlay:
+      name: <<overlay_name>>
+      file: config/dadflix-custom/streaming-top-left/<<overlay_name>>.png
+      group: ICONS
+      weight: <<weight>>
+    ignore_blank_results: true
+    tmdb_discover:
+      limit: <<limit>>
+      with_watch_providers: <<tmdb_key>>
+      watch_region: US
+      with_original_language: en
+      sort_by: popularity.desc
+      
+overlays:
+
+# Plex Fallback #
+
+  Plex:
+    overlay:
+      name: plex
+      file: config/dadflix-custom/streaming-top-left/Plex.png
+      group: ICONS
+      weight: 15
+    plex_all: true
+
+# Streaming #
+  # Same as Default Streaming #
+
+  Netflix:
+    variables: {key: netflix, tmdb_key: 8, weight: 160, limit: 1500}
+    template: [name: streaming]
+
+  Prime:
+    variables: {key: amazon, tmdb_key: 9, weight: 150, limit: 1500}
+    template: [name: streaming]
+
+  Disney:
+    variables: {key: disney, tmdb_key: 337, weight: 140, limit: 1500}
+    template: [name: streaming]
+
+  Max:
+    variables: {key: max, tmdb_key: 1899, weight: 130, limit: 1500}
+    template: [name: streaming]
+
+  YouTube:
+    variables: {key: youtube, tmdb_key: 188, weight: 120, limit: 1500}
+    template: [name: streaming]
+
+  Hulu:
+    variables: {key: hulu, tmdb_key: 15, weight: 110, limit: 1500}
+    template: [name: streaming]
+
+  Paramount:
+    variables: {key: paramount, tmdb_key: 531|1770|1853, weight: 100, limit: 1500}
+    template: [name: streaming]
+
+  AppleTV:
+    variables: {key: appletv, tmdb_key: 350, weight: 90, limit: 1500}
+    template: [name: streaming]
+
+  Peacock:
+    variables: {key: peacock, tmdb_key: 386, weight: 80, limit: 1500}
+    template: [name: streaming]
+
+  Showtime: #Showtimes that are packaged with other streaming services
+    variables: {key: showtime, tmdb_key: 37, weight: 70, limit: 1500}
+    template: [name: streaming]
+
+  Crave:
+    variables: {key: crave, tmdb_key: 230, weight: 60, limit: 1500}
+    template: [name: streaming]
+
+  NOW:
+    variables: {key: now, tmdb_key: 39, weight: 55, limit: 1500}
+    template: [name: streaming]
+
+  All 4:
+    variables: {key: all4, tmdb_key: 103, weight: 50, limit: 1500}
+    template: [name: streaming]
+
+  BritBox:
+    variables: {key: britbox, tmdb_key: 151, weight: 40, limit: 1500}
+    template: [name: streaming]
+
+  BET+:
+    variables: {key: bet, tmdb_key: 1759, weight: 30, limit: 1500}
+    template: [name: streaming]
+
+  # EXTRA added streaming services #
+
+  AMC+:
+    variables: {key: amc+, tmdb_key: 526|1854|528|635, weight: 25, limit: 1500}
+    template: [name: streaming]
+
+  Freevee:
+    variables: {key: freevee, tmdb_key: 613, weight: 25, limit: 1500}
+    template: [name: streaming]
+
+  FuboTV:
+    variables: {key: fubotv, tmdb_key: 257, weight: 25, limit: 1500}
+    template: [name: streaming]
+
+  FXNOW:
+    variables: {key: fxnow, tmdb_key: 123, weight: 25, limit: 1500}
+    template: [name: streaming]
+
+  Hoopla:
+    variables: {key: hoopla, tmdb_key: 212, weight: 25, limit: 1500}
+    template: [name: streaming]
+
+  MGM+:
+    variables: {key: mgm+, tmdb_key: 34|583|636, weight: 25, limit: 1500}
+    template: [name: streaming]
+
+  Starz:
+    variables: {key: starz, tmdb_key: 43|1855|634|1794, weight: 27, limit: 1500}
+    template: [name: streaming]
+
+  TBS:
+    variables: {key: tbs, tmdb_key: 506, weight: 25, limit: 1500}
+    template: [name: streaming]
+
+  TNT:
+    variables: {key: tnt, tmdb_key: 363, weight: 25, limit: 1500}
+    template: [name: streaming]
+
+  truTV:
+    variables: {key: trutv, tmdb_key: 507, weight: 25, limit: 1500}
+    template: [name: streaming]
+
+  tubiTV:
+    variables: {key: tubitv, tmdb_key: 73, weight: 25, limit: 1500}
+    template: [name: streaming]
+
+  USA:
+    variables: {key: usa, tmdb_key: 322, weight: 25, limit: 1500}
+    template: [name: streaming]
+
