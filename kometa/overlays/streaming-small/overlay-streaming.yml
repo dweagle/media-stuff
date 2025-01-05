@@ -102,7 +102,7 @@ overlays:
     variables: {key: bet, tmdb_key: 1759, weight: 30, limit: 1500}
     template: [name: streaming]
 
-  EXTRA added streaming services #
+  # EXTRA added streaming services
 
   AMC+:
     variables: {key: amc+, tmdb_key: 526|1854|528|635, weight: 26, limit: 1500}
