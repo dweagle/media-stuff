@@ -1,0 +1,74 @@
+templates:
+  rating_score:  #rating score pulled from plex **** score using 'mass_****_score_update: ****' operation.
+    overlay:
+      name: <<names>>
+      group: <<group>>
+      weight: <<weight>>
+      file: <<files>>
+      horizontal_offset: 50
+      horizontal_align: right
+      vertical_offset: 28
+      vertical_align: bottom
+      back_width: 119
+      back_height: 60
+      back_align: center
+      font_color: "#111111"
+      font: config/dadflix-custom/ratings/AvenirNextLTPro-Bold.ttf
+      font_size: 55
+    conditionals:
+      files:
+        conditions:
+          - key: rating_score_top_backdrop
+            value: config/dadflix-custom/ratings/rating-top.png
+          - key: rating_score_high_backdrop
+            value: config/dadflix-custom/ratings/rating-high.png
+          - key: rating_score_mid_backdrop
+            value: config/dadflix-custom/ratings/rating-mid.png
+          - key: rating_score_low_backdrop
+            value: config/dadflix-custom/ratings/rating-low.png
+      audience_rating.gte:
+        conditions:
+          - key: [rating_score_top, rating_score_top_backdrop]
+            value: 9.0
+          - key: [rating_score_high, rating_score_high_backdrop]
+            value: 7.5
+          - key: [rating_score_mid, rating_score_mid_backdrop]
+            value: 6.0
+          - key: [rating_score_low, rating_score_low_backdrop]
+            value: 0
+      names:
+        default: <<overlay_name>>
+        conditions:
+          - key: [rating_score_top, rating_score_high, rating_score_mid, rating_score_low]
+            value: text(<<audience_rating>>)
+    plex_search:
+      all:
+        audience_rating.gte: <<audience_rating.gte>>
+
+    ignore_blank_results: true
+
+overlays:
+  rating_score_top_backdrop:
+    variables: { key: rating_score_top_backdrop, weight: 600, group: backdrop }
+    template: [ name: rating_score ]
+  rating_score_high_backdrop:
+    variables: { key: rating_score_high_backdrop, weight: 500, group: backdrop }
+    template: [ name: rating_score ]
+  rating_score_mid_backdrop:
+    variables: { key: rating_score_mid_backdrop, weight: 400, group: backdrop }
+    template: [ name: rating_score ]
+  rating_score_low_backdrop:
+    variables: { key: rating_score_low_backdrop, weight: 300, group: backdrop }
+    template: [ name: rating_score ]
+  rating_score_top:
+    variables: { key: rating_score_top, weight: 600, group: score }
+    template: [ name: rating_score ]
+  rating_score_high:
+    variables: { key: rating_score_high, weight: 500, group: score }
+    template: [ name: rating_score ]
+  rating_score_mid:
+    variables: { key: rating_score_mid, weight: 400, group: score }
+    template: [ name: rating_score ]
+  rating_score_low:
+    variables: { key: rating_score_low, weight: 300, group: score }
+    template: [ name: rating_score ]
